@@ -21,9 +21,18 @@
         $(document).ready(function(){
             $("#menu").load("menu.html");
             switch (parameters.get("accion")) {
-                case "1": createForm(); break;
-                case "2": modifyForm(); break;
-                case "3": deleteBet(); break;
+                case "1": 
+                    createForm();
+                    document.title = "Crear apuesta";
+                break;
+                case "2": 
+                    modifyForm();
+                    document.title = "Modificar apuesta";
+                break;
+                case "3": 
+                    deleteBet();
+                    document.title = "Eliminar apuesta";
+                break;
                 default:
                     alert("Error. Accion no encontrada")
                     break;
